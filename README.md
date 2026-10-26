@@ -6,9 +6,8 @@ Open-source turn-based grid strategy game built in Godot 4. Strategically place 
 ## 🎮 Features
 - **Grid-Based Pawn Movement:** Step-by-step movement validation across an active grid.
 - **Dynamic Wall Placement:** Interactive wall positioning with collision and orientation controls.
-- **Pathfinding Validation:** Real-time path checking (A* / BFS) to ensure neither player is fully trapped.
-- **Local Multiplayer:** Hot-seat 2-player turn mechanics.
-- **Clean UI & Modern Visuals:** Built entirely from scratch using native Godot engine shaders and node layouts.
+- **Pathfinding Validation:** To be developped
+- **Local Multiplayer:**
 
 ---
 
