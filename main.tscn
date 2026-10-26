@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://yea6pjgcqlau"]
+
+[ext_resource type="PackedScene" uid="uid://1hltrt1a3bq8" path="res://board.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://2h5no3ppbgy6" path="res://UI_updates.gd" id="2_0xm2m"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ig7tw"]
+radius = 0.4
+height = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_psm7c"]
+
+[node name="Main" type="Node3D" unique_id=1732416215]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1746732780]
+transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 12.2, 7)
+projection = 1
+fov = 60.0
+size = 11.0
+near = 0.097
+far = 29.91
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1778792541]
+transform = Transform3D(0.49999994, 0.70710677, 0.49999997, -0.70710677, -3.090862e-08, 0.70710677, 0.5, -0.70710677, 0.49999997, 5.1768465, 5.301758, 0)
+shadow_enabled = true
+
+[node name="Board" parent="." unique_id=110121371 instance=ExtResource("1_ig7tw")]
+player_mesh = SubResource("CapsuleMesh_ig7tw")
+wall_mesh = SubResource("BoxMesh_psm7c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1099439958]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1436779260]
+offset_left = -1.0
+offset_right = 82.0
+offset_bottom = 23.0
+text = "WALLRACE"
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1214113159 node_paths=PackedStringArray("info")]
+offset_left = 20.0
+offset_top = 592.0
+offset_right = 60.0
+offset_bottom = 615.0
+script = ExtResource("2_0xm2m")
+info = NodePath("../../Board")

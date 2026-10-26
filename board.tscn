@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://1hltrt1a3bq8"]
+
+[ext_resource type="Script" uid="uid://dny5yvlvtryr4" path="res://Scripts/board.gd" id="1_p0ybc"]
+[ext_resource type="PackedScene" uid="uid://cbpxkmg056p3i" path="res://tile.tscn" id="2_psm7c"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8l818"]
+
+[node name="Board" type="Node3D" unique_id=110121371]
+script = ExtResource("1_p0ybc")
+player_mesh = SubResource("CapsuleMesh_8l818")
+tile_blueprint = ExtResource("2_psm7c")

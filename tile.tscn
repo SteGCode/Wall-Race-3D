@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cbpxkmg056p3i"]
+
+[ext_resource type="Script" uid="uid://d0w232cvg4urj" path="res://Scripts/tile.gd" id="1_n3f48"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vx4y2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a2t34"]
+
+[node name="Tile" type="StaticBody3D" unique_id=15018471]
+script = ExtResource("1_n3f48")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1054064505]
+mesh = SubResource("BoxMesh_vx4y2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=445732226]
+shape = SubResource("BoxShape3D_a2t34")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
